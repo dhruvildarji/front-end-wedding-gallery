@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  
+  <body>
+    <div class="flex gallery-page-wrapper">
+      
+      <div class="gallery-header">
+        <div class="flex container">
+          <h3>IMAGE GALLERY</h3>
+          <button class="btn logout" onclick={handleLogout()}>Logout</button>
+        </div>        
+      </div>
+
+      <div class="container new-image-upload-container">
+        <form id="upload-new-image-form" class="flex upload-new-image-form">
+          <div class="flex form-group">
+            <label class="form-label" for="upload_new_file">Upload New Image</label>
+            <input type="file" name="upload_new_file" class="form-input">
+          </div>
+          <button type="submit" class="btn upload-image-button">Upload</button>
+        </form>
+        <p class="image-upload-success-message"></p>
+      </div>
+
+      <div class="container gallery-container">
+        <h3>Image Gallery</h3>
+        <div class="sort-options">
+          <div class="form-group">
+            <label class="form-label" for="">Sort By</label>
+            <select id="sort-by-value" onchange="sortImages()">
+                <option value="" selected disabled hidden>Choose</option>
+                <option value="date">Date</option>
+                <option value="likes">Likes</option>
+              </select>
+          </div>
+        </div>
+        <div class="flex gallery-card-container"></div>
+      </div>
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="gallery.js"></script>
+  </body>
+</html>

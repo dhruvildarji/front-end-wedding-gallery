@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register/Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+  
+    <div class="flex container page-wrapper">
+
+        <div class="tab_wrapper">
+          <header>
+            <nav>
+              <div class="tab tab1 active">
+                <div class="block">Register</div>
+              </div>
+              <div class="tab tab2">
+                <div class="block">Login</div>
+              </div>
+              <div class="indicator"></dqiv>
+            </nav>
+          </header>
+          <main>
+            <div class="tab_reel">
+              <div class="tab_panel1">
+
+                <div class="form-container">
+    
+                  <form id="register-form" class="user-form">
+                    
+                    <div class="flex form-group">
+                      <label class="form-label" for="user_name">User Name</label>
+                      <input type="text" class="form-input" name="user_name" placeholder="First Name">
+                      <p class="error-message">Error User Name</p>
+                    </div>
+                    
+                    <div class="flex form-group">
+                      <label class="form-label" for="user_email">Email</label>
+                      <input type="email" class="form-input" name="user_email" placeholder="Email">
+                      <p class="error-message">Error Email</p>
+                    </div>
+                    
+                    <div class="flex form-group">
+                      <label class="form-label" for="user_password">Password</label>
+                      <input type="password" class="form-input" name="user_password" placeholder="Password">
+                      <p class="error-message">Error Password</p>
+                    </div>
+
+                    <div class="flex form-group">
+                        <label class="form-label" for="confirm_user_password">Confirm Password</label>
+                        <input type="password" class="form-input" name="confirm_user_password" placeholder=" Re-Enter Password">
+                        <p class="error-message">Re-Enter Password</p>
+                      </div>
+          
+                    <button id="submit-register-form" class="btn submit-form" type="submit">Register</button>
+          
+                  </form>
+
+                  <p class="register-success-message"></p>
+          
+                </div>
+
+              </div>
+              <div class="tab_panel2">
+                
+                  <div class="form-container">
+    
+                    <form id="login-form" class="user-form">
+                      
+                      <div class="flex form-group">
+                        <label class="form-label" for="user_login_email">Email</label>
+                        <input type="email" class="form-input" name="user_login_email" placeholder="Email">
+                        <p class="error-message">Error Message</p>
+                      </div>
+                      
+                      <div class="flex form-group">
+                        <label class="form-label" for="user_login_password">Password</label>
+                        <input type="password" class="form-input" name="user_login_password" placeholder="Password">
+                        <p class="error-message">Error Message</p>
+                      </div>
+            
+                      <button id="submit-login-form" class="btn submit-form" type="submit">Login</button>
+            
+                    </form>
+            
+                  </div>
+
+              </div>
+            </div>
+          </main>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
